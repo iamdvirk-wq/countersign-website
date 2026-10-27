@@ -435,3 +435,37 @@ img, svg { display: block; max-width: 100%; }
 }
 .back-link { display: inline-block; margin-bottom: 24px; font-weight: 600; text-decoration: none; padding: 8px 0; }
 .back-link:hover { text-decoration: underline; }
+
+/* ---------- Booking page ---------- */
+.book-hero { padding: clamp(40px, 7vw, 88px) 0 clamp(8px, 2vw, 24px); }
+.book-hero h1 { margin-bottom: 0.3em; }
+.book-hero .lede { margin-bottom: 36px; }
+.book-options { display: grid; gap: 14px; }
+@media (min-width: 760px) { .book-options { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.book-option {
+  display: grid; gap: 6px; text-decoration: none; color: var(--text);
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 24px; transition: border-color .15s ease, transform .15s ease;
+}
+.book-option:hover { border-color: var(--line-strong); transform: translateY(-1px); }
+.book-option-featured { background: var(--feature-bg); color: var(--feature-text); border-color: transparent; }
+.book-option-meta { font-size: 0.8125rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.book-option-featured .book-option-meta { color: var(--feature-muted); }
+.book-option-title { font-family: var(--font-display); font-weight: 600; font-size: 1.375rem; letter-spacing: -0.015em; }
+.book-option-text { color: var(--muted); font-size: 0.96875rem; }
+.book-option-featured .book-option-text { color: var(--feature-muted); }
+.book-option-go { margin-top: 8px; font-weight: 600; color: var(--text); }
+.book-option-featured .book-option-go { color: var(--amber); }
+@media (prefers-color-scheme: dark) { .book-option-featured { border-color: var(--amber); } }
+
+.scheduler {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden;
+}
+.scheduler-frame { display: block; width: 100%; height: 760px; border: 0; }
+@media (max-width: 599px) { .scheduler-frame { height: 1050px; } }
+.scheduler-empty { padding: 32px 24px; max-width: 60ch; }
+.scheduler-empty p { color: var(--muted); }
+.scheduler-alt { margin-top: 12px; font-size: 0.9375rem; color: var(--muted); }
+.section-band .scheduler-alt { color: var(--muted-on-band); }
+.section-band .hero-note { color: var(--muted-on-band); }

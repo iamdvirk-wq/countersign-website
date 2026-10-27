@@ -19,9 +19,10 @@ window.COUNTERSIGN = {
 
   /* ---- Links -------------------------------------------------------- */
   stripePaymentLink: "[STRIPE_PAYMENT_LINK]",  // Stripe Payment Link for the $249 Gap Check
-  bookingLink:       "[BOOKING_LINK]",         // Cal.com or Calendly link for the 15-minute chat
+  bookingLink:       "[BOOKING_LINK]",         // Cal.com or Calendly link for the free 15-minute chat
+  gapCheckBookingLink: "[GAP_CHECK_BOOKING_LINK]", // Cal.com or Calendly link for the 45-minute Gap Check call (shown after payment)
   formEndpoint:      "[FORM_ENDPOINT]",        // Formspree endpoint, e.g. "https://formspree.io/f/abcdwxyz"
-  siteUrl:           "[SITE_URL]",             // your web address, no slash at the end, e.g. "https://countersign.com.au"
+  siteUrl:           "https://iamdvirk-wq.github.io/countersign-website",             // your web address, no slash at the end, e.g. "https://countersign.com.au"
 
   /* ---- Prices (shown exactly as typed) ------------------------------ */
   prices: {

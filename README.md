@@ -6,6 +6,7 @@ A plain static website: three pages, no build step, nothing to install.
 index.html      Home page (all sections)
 privacy.html    Privacy policy (template, review it)
 terms.html      Gap Check terms (template, review it)
+book.html       Booking page: 15-minute chat calendar + Gap Check pay-then-book
 config.js       ← YOUR DETAILS, LINKS AND PRICES LIVE HERE
 robots.txt      Tells search engines they may index the site
 sitemap.xml     List of pages for search engines
@@ -34,9 +35,10 @@ Open `config.js` in any text editor (TextEdit, Notepad or VS Code). Replace each
 | `[EMAIL]` | Your business email | `"hello@countersign.com.au"` |
 | `[ABN]` | Your ABN | `"12 345 678 901"` |
 | `[STRIPE_PAYMENT_LINK]` | Your Stripe Payment Link for the Gap Check | `"https://buy.stripe.com/abc123"` |
-| `[BOOKING_LINK]` | Your Cal.com or Calendly link for the 15-minute chat | `"https://cal.com/countersign/15min"` |
+| `[BOOKING_LINK]` | Your Cal.com or Calendly link for the free 15-minute chat. It appears as a calendar on the booking page | `"https://cal.com/countersign/15min"` |
+| `[GAP_CHECK_BOOKING_LINK]` | Your Cal.com or Calendly link for the 45-minute Gap Check call. It's shown after someone pays | `"https://cal.com/countersign/gap-check"` |
 | `[FORM_ENDPOINT]` | Your Formspree form address (see step 3) | `"https://formspree.io/f/xyzabcd"` |
-| `[SITE_URL]` | Your web address, **no slash at the end** | `"https://countersign.com.au"` |
+| `siteUrl` | Your web address, **no slash at the end**. Already set to the GitHub Pages address | `"https://iamdvirk-wq.github.io/countersign-website"` |
 | `prices` | The three prices, exactly as they should appear | `"$249"`, `"$1,200"`, `"$199"` |
 | `gstNote` | Leave as `""` until you are GST-registered. Then use e.g. `"inc. GST"` | `""` |
 | `useLogoFile` | Change to `true` once your logo is saved as `assets/logo.svg` | `false` |
@@ -44,17 +46,18 @@ Open `config.js` in any text editor (TextEdit, Notepad or VS Code). Replace each
 
 Every page reads from this one file. Change a price here and it changes everywhere: buttons, pricing cards, the hero box and the terms page.
 
-### Step 1b: `[SITE_URL]` in five more places
+### Step 1b: if you move to your own domain
 
-Search engines and social media apps don't run the page script, so your web address also needs to be typed into these files. Use your editor's **Find and Replace** to swap `[SITE_URL]` for your address (e.g. `https://countersign.com.au`):
+The address is currently `https://iamdvirk-wq.github.io/countersign-website`. Search engines and social media apps don't run the page script, so if you move to your own domain, use **Find and Replace** to swap that address for the new one in `config.js` and in these files:
 
 - `index.html` (top of the file)
 - `privacy.html` (top of the file)
 - `terms.html` (top of the file)
+- `book.html` (top of the file)
 - `sitemap.xml`
 - `robots.txt`
 
-In VS Code, **Edit → Replace in Files** does all five at once.
+In VS Code, **Edit → Replace in Files** does them all at once.
 
 ### Step 1c: the privacy policy and terms
 
@@ -70,7 +73,9 @@ Both are **templates**. Read them, make sure they match how you work, and ask a 
 
 1. In Stripe, go to **Payment Links → New**.
 2. Add a product called "QSPP Gap Check" at A$249 (one-time).
-3. Recommended: under **After payment**, choose **Don't show confirmation page** and redirect to your booking link. Customers then book their call straight after paying.
+3. Under **After payment**, choose **Don't show confirmation page** and redirect customers to
+   `https://iamdvirk-wq.github.io/countersign-website/book?paid=1`
+   (or your own domain + `/book?paid=1`). The booking page then shows the Gap Check calendar so they pick a time straight away.
 4. Copy the link (it starts with `https://buy.stripe.com/`) into `config.js`.
 
 ## 3. Set up the contact form (Formspree, free plan)

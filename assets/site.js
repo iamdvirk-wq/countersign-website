@@ -123,7 +123,57 @@
     update();
   }
 
-  /* ---- 7. Contact form ---------------------------------------------- */
+  /* ---- 7. Booking page: embedded calendars -------------------------- */
+  // Turns a Cal.com or Calendly link into an embeddable calendar.
+  function embedUrl(link) {
+    try {
+      var u = new URL(link);
+      var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (/(^|\.)calendly\.com$/.test(u.hostname)) {
+        u.searchParams.set("embed_domain", location.hostname || "localhost");
+        u.searchParams.set("embed_type", "Inline");
+        u.searchParams.set("hide_gdpr_banner", "1");
+        u.searchParams.set("primary_color", "e8a33d");
+        if (dark) {
+          u.searchParams.set("background_color", "152035");
+          u.searchParams.set("text_color", "f2eee6");
+        }
+      } else if (/(^|\.)cal\.com$/.test(u.hostname)) {
+        u.searchParams.set("embed", "true");
+        u.searchParams.set("theme", dark ? "dark" : "light");
+      }
+      return u.toString();
+    } catch (e) { return null; }
+  }
+
+  doc.querySelectorAll("[data-scheduler]").forEach(function (box) {
+    var link = get(box.getAttribute("data-scheduler"));
+    var src = (!link || isPlaceholder(link)) ? null : embedUrl(link);
+    if (!src) return; // keeps the "being set up" message
+    var frame = doc.createElement("iframe");
+    frame.src = src;
+    frame.title = box.getAttribute("data-title") || "Booking calendar";
+    frame.loading = "lazy";
+    frame.className = "scheduler-frame";
+    box.textContent = "";
+    box.appendChild(frame);
+    var alt = box.parentNode.querySelector(".scheduler-alt");
+    if (alt) {
+      alt.hidden = false;
+      alt.querySelector("a").href = link;
+    }
+  });
+
+  // After paying, Stripe sends people to book.html?paid=1 to choose a time.
+  var paid = /[?&]paid=1\b/.test(location.search);
+  doc.querySelectorAll("[data-when-paid]").forEach(function (el) {
+    el.hidden = el.getAttribute("data-when-paid") === "yes" ? !paid : paid;
+  });
+  if (paid && doc.getElementById("gap-check")) {
+    doc.getElementById("gap-check").scrollIntoView();
+  }
+
+  /* ---- 8. Contact form ---------------------------------------------- */
   var form = doc.querySelector("#contact-form");
   if (form) {
     form.setAttribute("action", C.formEndpoint || "");

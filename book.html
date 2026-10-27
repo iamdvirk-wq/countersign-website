@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a time — Countersign</title>
+  <meta name="description" content="Book a free 15-minute chat or a QSPP Gap Check with Countersign. Everything is done by video.">
+  <meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1724" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Countersign">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="Book a time — Countersign">
+  <meta property="og:description" content="Book a free 15-minute chat or a QSPP Gap Check. Done by video.">
+  <meta property="og:url" content="https://iamdvirk-wq.github.io/countersign-website/book">
+  <meta property="og:image" content="https://iamdvirk-wq.github.io/countersign-website/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/InterDisplay-SemiBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="config.js" defer></script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body data-page="book">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-tick" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="index.html" aria-label="Countersign home">Countersign<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3.5 10.5l4.5 4.5 9-11" fill="none" stroke="#E8A33D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#how-it-works">How it works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="#gap-check">Book a Gap Check — <span data-cfg="prices.gapCheck">$249</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="book-hero" aria-labelledby="book-title">
+    <div class="wrap">
+      <p class="eyebrow">Book</p>
+      <h1 id="book-title">Book a time</h1>
+      <p class="lede">Two ways to start. Both are done by video, so there’s no need to leave the pharmacy.</p>
+
+      <div class="book-options">
+        <a class="book-option" href="#chat">
+          <span class="book-option-meta">Free · 15 minutes</span>
+          <span class="book-option-title">Book a 15-minute chat</span>
+          <span class="book-option-text">Talk through where you’re at and whether Countersign is a fit.</span>
+          <span class="book-option-go" aria-hidden="true">Choose a time →</span>
+        </a>
+        <a class="book-option book-option-featured" href="#gap-check">
+          <span class="book-option-meta"><span data-cfg="prices.gapCheck">$249</span> · 45 minutes</span>
+          <span class="book-option-title">Book a Gap Check</span>
+          <span class="book-option-text">A review of your setup and a written report on what to fix first.</span>
+          <span class="book-option-go" aria-hidden="true">Pay and book →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15-MINUTE CHAT -->
+  <section class="section" id="chat" aria-labelledby="chat-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Free</p>
+        <h2 id="chat-title">Book a 15-minute chat</h2>
+        <p>Pick a time that suits you. You’ll get a calendar invite with the video link.</p>
+      </div>
+      <div class="scheduler-wrap">
+        <div class="scheduler" data-scheduler="bookingLink" data-title="Calendar for booking a 15-minute chat">
+          <div class="scheduler-empty">
+            <h3>Online booking is nearly ready</h3>
+            <p>In the meantime, call <a href="tel:[MOBILE]" data-cfg-href="tel:{mobileTel}" data-cfg="mobile">[MOBILE]</a> or email <a href="mailto:[EMAIL]" data-cfg-href="mailto:{email}" data-cfg="email">[EMAIL]</a> and we’ll find a time.</p>
+          </div>
+        </div>
+        <p class="scheduler-alt" hidden>Calendar not showing? <a href="#" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAP CHECK -->
+  <section class="section section-band" id="gap-check" aria-labelledby="gap-title">
+    <div class="wrap">
+
+      <!-- Shown before payment -->
+      <div data-when-paid="no">
+        <div class="section-head">
+          <p class="eyebrow">Start here</p>
+          <h2 id="gap-title">Book a Gap Check — <span data-cfg="prices.gapCheck">$249</span></h2>
+          <p>Pay first, then choose your call time straight away.</p>
+        </div>
+        <ol class="steps" style="list-style:none;margin:0 0 32px;padding:0">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3><span class="visually-hidden">Step 1: </span>Pay securely</h3>
+            <p>Payment is handled by Stripe. We never see your card details.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3><span class="visually-hidden">Step 2: </span>Choose your call time</h3>
+            <p>After paying, you come straight back here to pick a 45-minute video call.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3><span class="visually-hidden">Step 3: </span>Get your report</h3>
+            <p>Your written gap report arrives within 5 business days of the call.</p>
+          </li>
+        </ol>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="[STRIPE_PAYMENT_LINK]" data-cfg-href="{stripePaymentLink}">Pay <span data-cfg="prices.gapCheck">$249</span> and book</a>
+          <a class="btn btn-secondary" href="#chat">Have a question first? Book a chat</a>
+        </div>
+        <p class="hero-note">Full refund if you cancel before the call, or if your report isn’t delivered within 10 business days of the call. See the <a href="terms.html">Gap Check terms</a>.</p>
+      </div>
+
+      <!-- Shown after payment (Stripe sends people to book.html?paid=1) -->
+      <div data-when-paid="yes" hidden>
+        <div class="section-head">
+          <p class="eyebrow">Step 2 of 3</p>
+          <h2>Thanks for your payment. Now choose your call time.</h2>
+          <p>Pick a 45-minute slot. You’ll get a calendar invite with the video link, and a Stripe receipt by email.</p>
+        </div>
+        <div class="scheduler-wrap">
+          <div class="scheduler" data-scheduler="gapCheckBookingLink" data-title="Calendar for booking your Gap Check call">
+            <div class="scheduler-empty">
+              <h3>We’ll be in touch to book your call</h3>
+              <p>Your payment has gone through. We’ll contact you soon to find a time. You can also call <a href="tel:[MOBILE]" data-cfg-href="tel:{mobileTel}" data-cfg="mobile">[MOBILE]</a> or email <a href="mailto:[EMAIL]" data-cfg-href="mailto:{email}" data-cfg="email">[EMAIL]</a>.</p>
+            </div>
+          </div>
+          <p class="scheduler-alt" hidden>Calendar not showing? <a href="#" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p><strong>Countersign</strong> · ABN <span data-cfg="abn">[ABN]</span></p>
+      <p>© <span data-cfg="year">2026</span> Countersign. Mango Hill, Queensland.</p>
+      <p class="disclaimer">Countersign is an independent business. It is not affiliated with, or endorsed by, the Pharmacy Guild of Australia, the QSPP, the QCPP or any government body.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html" aria-current="page">Book</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
