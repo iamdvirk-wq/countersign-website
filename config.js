@@ -15,7 +15,7 @@ window.COUNTERSIGN = {
   /* ---- Contact details ---------------------------------------------- */
   mobile: "[MOBILE]",          // e.g. "0400 000 000"
   email:  "[EMAIL]",           // e.g. "hello@countersigns.com.au"
-  abn:    "[ABN]",             // e.g. "12 345 678 901"
+  abn:    "28 551 886 085",             // e.g. "12 345 678 901"
 
   /* ---- Links -------------------------------------------------------- */
   stripePaymentLink: "[STRIPE_PAYMENT_LINK]",  // Stripe Payment Link for the $249 Gap Check
