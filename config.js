@@ -10,7 +10,7 @@ window.COUNTERSIGN = {
 
   /* ---- About you ---------------------------------------------------- */
   founderName:       "Div",
-  founderExperience: "[ONE LINE ABOUT YOUR EXPERIENCE]",   // e.g. "Eight years working in community pharmacy front-of-house and admin."
+  founderExperience: "I’ve worked in community pharmacy, so I know how accreditation paperwork lands on top of an already busy day.",   // e.g. "Eight years working in community pharmacy front-of-house and admin."
 
   /* ---- Contact details ---------------------------------------------- */
   mobile: "0468 891 985",          // e.g. "0400 000 000"
@@ -18,7 +18,7 @@ window.COUNTERSIGN = {
   abn:    "28 551 886 085",             // e.g. "12 345 678 901"
 
   /* ---- Links -------------------------------------------------------- */
-  stripePaymentLink: "[STRIPE_PAYMENT_LINK]",  // Stripe Payment Link for the $249 Gap Check
+  stripePaymentLink: "https://buy.stripe.com/cNi4gs9Me0Uh4AVcqP8IU01",  // Stripe Payment Link for the $249 Gap Check
   bookingLink:       "https://cal.com/countersigns/15min",         // Cal.com or Calendly link for the free 15-minute chat
   gapCheckBookingLink: "https://cal.com/countersigns/gap-check", // Cal.com or Calendly link for the 45-minute Gap Check call (shown after payment)
   formEndpoint:      "https://formspree.io/f/meaaanrn",        // Formspree endpoint, e.g. "https://formspree.io/f/abcdwxyz"
