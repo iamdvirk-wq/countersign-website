@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace [SITE_URL] with your web address, e.g. https://countersign.com.au
+Sitemap: [SITE_URL]/sitemap.xml

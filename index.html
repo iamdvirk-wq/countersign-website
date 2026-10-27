@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Countersign — QSPP accreditation support for independent pharmacies</title>
+  <meta name="description" content="Countersign gets independent community pharmacies ready for their QSPP accreditation assessment. Registers, records and evidence organised remotely, so your team can stay on the floor.">
+  <meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1724" media="(prefers-color-scheme: dark)">
+
+  <!-- Social sharing. Replace [SITE_URL] with your web address (see README). -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Countersign">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="Countersign — QSPP accreditation support for independent pharmacies">
+  <meta property="og:description" content="We prepare it. Your pharmacist signs it. Remote QSPP accreditation admin for independent pharmacies.">
+  <meta property="og:url" content="[SITE_URL]/">
+  <meta property="og:image" content="[SITE_URL]/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Countersign — We prepare it. Your pharmacist signs it.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/InterDisplay-SemiBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/fonts/Inter-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="config.js" defer></script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body data-page="home" class="has-mobile-cta">
+
+<!-- Icon sprite (decorative) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-tick" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 20 20"><path d="M5 10h10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <!-- Logo: shows this wordmark until you set useLogoFile: true in config.js -->
+    <a class="wordmark" href="#top" aria-label="Countersign, back to top">Countersign<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3.5 10.5l4.5 4.5 9-11" fill="none" stroke="#E8A33D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="[STRIPE_PAYMENT_LINK]" data-cfg-href="{stripePaymentLink}">Book a Gap Check — <span data-cfg="prices.gapCheck">$249</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">For independent community pharmacies</p>
+        <!-- Other headline options:
+             "Your QSPP evidence, ready before the assessor is."
+             "We prepare it. Your pharmacist signs it." -->
+        <h1 id="hero-title">QSPP-ready, without the after-hours admin.</h1>
+        <svg class="signature" viewBox="0 0 320 52" aria-hidden="true" focusable="false">
+          <path class="sig" pathLength="100" d="M4 36C10 30 16 14 26 12c8-2 6 12-2 18-6 5-10 0-2-6 8-6 16 6 22 6s8-10 14-10 4 12 12 12 10-14 18-14-4 16 14 14c10-2 16-10 24-8s4 10 14 9c30-2 65 0 98 0"/>
+          <path class="tick" pathLength="100" d="M238 33l11 11 27-34"/>
+        </svg>
+        <p class="lede">Countersign gets independent pharmacies ready for their QSPP accreditation assessment — registers, records and evidence organised remotely, so your team can stay on the floor.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="[STRIPE_PAYMENT_LINK]" data-cfg-href="{stripePaymentLink}">Book a Gap Check — <span data-cfg="prices.gapCheck">$249</span></a>
+          <a class="btn btn-secondary" href="[BOOKING_LINK]" data-cfg-href="{bookingLink}">Book a 15-minute chat</a>
+        </div>
+        <p class="hero-note">Done remotely, by video and shared folders. Anything clinical is reviewed and signed off by your pharmacist.</p>
+      </div>
+
+      <aside class="first-step" aria-labelledby="first-step-title">
+        <p class="label">Your first step</p>
+        <h2 id="first-step-title">QSPP Gap Check</h2>
+        <p class="price"><span class="amount" data-cfg="prices.gapCheck">$249</span><span class="unit">one-off</span><span class="unit" data-cfg="gstNote" data-cfg-optional></span></p>
+        <ul>
+          <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>45-minute video call about your current setup</span></li>
+          <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Written gap report within 5 business days</span></li>
+          <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Fee credited to your Readiness Sprint if booked within 30 days</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 2. THE PROBLEM -->
+  <section class="section" style="padding-top:0" aria-labelledby="problem-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Why now</p>
+        <h2 id="problem-title">A new program. The same busy team.</h2>
+      </div>
+      <ul class="points">
+        <li>
+          <h3>QSPP started on 1 October 2026.</h3>
+          <p>It replaced QCPP, and pharmacies are now assessed against a new standard, AS&nbsp;85000:2024.</p>
+        </li>
+        <li>
+          <h3>The work lands on one person.</h3>
+          <p>Usually someone already busy on the floor, who ends up catching up on paperwork after close.</p>
+        </li>
+        <li>
+          <h3>Assessment day shouldn’t be a scramble.</h3>
+          <p>When evidence is spread across folders, inboxes and drawers, it’s hard to find when the assessor asks.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. HOW IT WORKS -->
+  <section class="section section-band" id="how-it-works" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title">Three steps, all done remotely.</h2>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3><span class="visually-hidden">Step 1: </span>Gap Check</h3>
+          <p>A 45-minute video call and a written report showing what’s ready, what’s missing and what to fix first.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3><span class="visually-hidden">Step 2: </span>Readiness Sprint</h3>
+          <p>Over 2–3 weeks, we organise your registers, records and evidence so they’re ready for assessment day.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3><span class="visually-hidden">Step 3: </span>Care plan</h3>
+          <p>A monthly top-up keeps your evidence current and gets you ready for the mid-cycle review.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4. PRICING -->
+  <section class="section" id="pricing" aria-labelledby="pricing-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Pricing</p>
+        <h2 id="pricing-title">Clear prices. Start small.</h2>
+        <p>Begin with a Gap Check. If you go ahead with a Readiness Sprint within 30 days, the fee comes off the Sprint.</p>
+      </div>
+
+      <div class="pricing">
+        <article class="plan plan-featured" aria-labelledby="plan-gap">
+          <span class="badge">Start here</span>
+          <div>
+            <h3 id="plan-gap">QSPP Gap Check</h3>
+            <p class="plan-sub">A clear picture of where you stand.</p>
+          </div>
+          <p class="price"><span class="amount" data-cfg="prices.gapCheck">$249</span><span class="unit">one-off</span><span class="unit" data-cfg="gstNote" data-cfg-optional></span></p>
+          <ul>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>45-minute video call reviewing your current accreditation setup</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Written gap report within 5 business days: what’s ready, what’s missing, what to fix first</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Fee credited to the Readiness Sprint if booked within 30 days</span></li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="[STRIPE_PAYMENT_LINK]" data-cfg-href="{stripePaymentLink}">Book a Gap Check — <span data-cfg="prices.gapCheck">$249</span></a>
+        </article>
+
+        <article class="plan" aria-labelledby="plan-sprint">
+          <div>
+            <h3 id="plan-sprint">Readiness Sprint</h3>
+            <p class="plan-sub">2–3 weeks, remote.</p>
+          </div>
+          <p class="price"><span class="amount" data-cfg="prices.sprint">$1,200</span><span class="unit">one-off</span><span class="unit" data-cfg="gstNote" data-cfg-optional></span></p>
+          <ul>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Evidence register organised by QSPP domain</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Policy version control</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Training and refresher register</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Incident, complaints and feedback registers</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Assessment-day pack</span></li>
+          </ul>
+          <a class="btn btn-secondary btn-block" href="[BOOKING_LINK]" data-cfg-href="{bookingLink}">Book a 15-minute chat</a>
+        </article>
+
+        <article class="plan" aria-labelledby="plan-care">
+          <div>
+            <h3 id="plan-care">Care plan</h3>
+            <p class="plan-sub">Stay ready between assessments. Cancel anytime.</p>
+          </div>
+          <p class="price"><span class="amount" data-cfg="prices.carePlan">$199</span><span class="unit">per month</span><span class="unit" data-cfg="gstNote" data-cfg-optional></span></p>
+          <ul>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Monthly evidence top-up</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Training-expiry reminders</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Mid-cycle review preparation</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Quarterly check of program claim records</span></li>
+          </ul>
+          <a class="btn btn-secondary btn-block" href="[BOOKING_LINK]" data-cfg-href="{bookingLink}">Book a 15-minute chat</a>
+        </article>
+      </div>
+      <p class="pricing-note">Prices are in Australian dollars.</p>
+    </div>
+  </section>
+
+  <!-- 5. WHAT WE DO / DON'T DO -->
+  <section class="section section-band" id="scope" aria-labelledby="scope-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What we do</p>
+        <h2 id="scope-title">We prepare it. Your pharmacist signs it.</h2>
+        <p>Countersign handles the systems and records. Clinical decisions stay with your pharmacist.</p>
+      </div>
+      <div class="split">
+        <div class="split-col do">
+          <h3>What we do</h3>
+          <ul>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Evidence registers</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Document and version control</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Training and incident registers</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Assessment-day pack</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Reminders</span></li>
+            <li><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Claim-record checks</span></li>
+          </ul>
+        </div>
+        <div class="split-col dont">
+          <h3>What we don’t do</h3>
+          <ul>
+            <li><svg class="dash-icon" aria-hidden="true"><use href="#i-dash"/></svg><span>Clinical advice</span></li>
+            <li><svg class="dash-icon" aria-hidden="true"><use href="#i-dash"/></svg><span>Writing clinical policies</span></li>
+            <li><svg class="dash-icon" aria-hidden="true"><use href="#i-dash"/></svg><span>Handling medicines</span></li>
+            <li><svg class="dash-icon" aria-hidden="true"><use href="#i-dash"/></svg><span>Site visits</span></li>
+            <li><svg class="dash-icon" aria-hidden="true"><use href="#i-dash"/></svg><span>Handling patient records</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="signoff"><svg class="tick-icon" aria-hidden="true"><use href="#i-tick"/></svg><span>Anything clinical is reviewed and signed off by your pharmacist.</span></p>
+    </div>
+  </section>
+
+  <!-- 6. ABOUT -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap about">
+      <div class="about-body">
+        <p class="eyebrow">About</p>
+        <!-- Optional photo: save it as assets/founder.jpg (square, about 400 × 400 px) and remove the comment marks around the next line.
+        <img class="about-photo" src="assets/founder.jpg" alt="[YOUR NAME]" width="160" height="160" loading="lazy">
+        -->
+        <h2 id="about-title">Hi, I’m <span data-cfg="founderName">[YOUR NAME]</span>.</h2>
+        <p data-cfg="founderExperience">[ONE LINE ABOUT YOUR EXPERIENCE]</p>
+        <p>I started Countersign to take accreditation admin off busy pharmacy teams. I’m not a pharmacist. I look after the systems and records, and your pharmacist signs off anything clinical.</p>
+        <p>I’m based in Mango Hill, Queensland, and work with pharmacies Australia-wide by video.</p>
+      </div>
+      <dl class="about-facts">
+        <div><dt>Based in</dt><dd>Mango Hill, Queensland</dd></div>
+        <div><dt>Works with</dt><dd>Independent pharmacies, Australia-wide</dd></div>
+        <div><dt>How</dt><dd>Video calls and shared folders</dd></div>
+        <div><dt>Background</dt><dd>Community pharmacy (not a pharmacist)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS — switched off. Only add real quotes, with the person's written permission.
+       To switch on: remove the comment marks at the start and end of this block.
+  <section class="section" id="testimonials" aria-labelledby="testimonials-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">From pharmacies</p>
+        <h2 id="testimonials-title">What owners say</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote><p>"REAL QUOTE HERE"</p></blockquote>
+          <figcaption>Name, Role — Pharmacy name, Suburb</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote><p>"REAL QUOTE HERE"</p></blockquote>
+          <figcaption>Name, Role — Pharmacy name, Suburb</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- 7. FAQ -->
+  <section class="section section-band" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Questions owners ask</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Are you a pharmacist?</summary>
+          <div class="answer"><p>No. I handle the systems and records. Your pharmacist reviews and signs off anything clinical.</p></div>
+        </details>
+        <details>
+          <summary>Do you work with Guild members?</summary>
+          <div class="answer"><p>Yes. The Guild gives advice and templates. Countersign does the hands-on admin.</p></div>
+        </details>
+        <details>
+          <summary>Do you need access to patient records?</summary>
+          <div class="answer"><p>No, and please don’t send any.</p></div>
+        </details>
+        <details>
+          <summary>Can you guarantee we’ll pass?</summary>
+          <div class="answer"><p>No one can. Accreditation decisions are made by the assessor. We make sure your evidence is organised and complete.</p></div>
+        </details>
+        <details>
+          <summary>Do you come on site?</summary>
+          <div class="answer"><p>No. Everything is done by video and shared folders.</p></div>
+        </details>
+        <details>
+          <summary>What if I’m not happy with the Gap Check?</summary>
+          <div class="answer"><p>You get a full refund if you cancel before the call, or if your report isn’t delivered within 10 business days of the call. See the <a href="terms.html">Gap Check terms</a>.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CONTACT -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Get in touch</h2>
+        <p class="muted">Call, email or send a message. Or book straight in.</p>
+        <dl class="contact-list">
+          <div><dt>Mobile</dt><dd><a href="tel:[MOBILE]" data-cfg-href="tel:{mobileTel}" data-cfg="mobile">[MOBILE]</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:[EMAIL]" data-cfg-href="mailto:{email}" data-cfg="email">[EMAIL]</a></dd></div>
+          <div><dt>ABN</dt><dd data-cfg="abn">[ABN]</dd></div>
+          <div><dt>Service area</dt><dd>Queensland and Australia-wide (remote)</dd></div>
+        </dl>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="[STRIPE_PAYMENT_LINK]" data-cfg-href="{stripePaymentLink}">Book a Gap Check — <span data-cfg="prices.gapCheck">$249</span></a>
+          <a class="btn btn-secondary" href="[BOOKING_LINK]" data-cfg-href="{bookingLink}">Book a 15-minute chat</a>
+        </div>
+      </div>
+
+      <form class="form" id="contact-form" action="[FORM_ENDPOINT]" method="POST" novalidate aria-labelledby="form-title">
+        <h3 id="form-title">Send a message</h3>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-business">Pharmacy name <span class="opt">(optional)</span></label>
+            <input id="f-business" name="business" type="text" autocomplete="organization">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" required aria-describedby="f-message-hint"></textarea>
+          <span class="hint" id="f-message-hint">Please don’t include any patient information.</span>
+        </div>
+        <!-- Spam trap: hidden from people, bots fill it in -->
+        <div class="hp" aria-hidden="true">
+          <label for="f-gotcha">Leave this empty</label>
+          <input id="f-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="_subject" value="New enquiry from the Countersign website">
+        <label class="check" for="f-consent">
+          <input id="f-consent" name="consent" type="checkbox" value="yes" required>
+          <span>I agree to be contacted about my enquiry.</span>
+        </label>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="hint">See how your details are handled in the <a href="privacy.html">privacy policy</a>.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p><strong>Countersign</strong> · ABN <span data-cfg="abn">[ABN]</span></p>
+      <p>© <span data-cfg="year">2026</span> Countersign. Mango Hill, Queensland.</p>
+      <p class="disclaimer">Countersign is an independent business. It is not affiliated with, or endorsed by, the Pharmacy Guild of Australia, the QSPP, the QCPP or any government body.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<div class="mobile-cta" aria-hidden="true">
+  <a class="btn btn-primary btn-block" tabindex="-1" href="[STRIPE_PAYMENT_LINK]" data-cfg-href="{stripePaymentLink}">Book a Gap Check — <span data-cfg="prices.gapCheck">$249</span></a>
+</div>
+
+</body>
+</html>
