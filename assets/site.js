@@ -146,28 +146,84 @@
     } catch (e) { return null; }
   }
 
-  doc.querySelectorAll("[data-scheduler]").forEach(function (box) {
+  // Cal.com's official embed script: the calendar grows to fit its content,
+  // so there is no box-inside-a-box scrolling on phones.
+  function loadCal() {
+    if (window.Cal) return window.Cal;
+    (function (C, A, L) {
+      var p = function (a, ar) { a.q.push(ar); };
+      var d = C.document;
+      C.Cal = C.Cal || function () {
+        var cal = C.Cal, ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {}; cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          var api = function () { p(api, arguments); };
+          var namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    return window.Cal;
+  }
+
+  function mountScheduler(box, n) {
     var link = get(box.getAttribute("data-scheduler"));
-    var src = (!link || isPlaceholder(link)) ? null : embedUrl(link);
-    if (!src) return; // keeps the "being set up" message
-    var frame = doc.createElement("iframe");
-    frame.src = src;
-    frame.title = box.getAttribute("data-title") || "Booking calendar";
-    frame.loading = "lazy";
-    frame.className = "scheduler-frame";
+    if (!link || isPlaceholder(link)) return; // keeps the "nearly ready" message
+    var u;
+    try { u = new URL(link); } catch (e) { return; }
+
     box.textContent = "";
-    box.appendChild(frame);
+    if (/(^|\.)cal\.com$/.test(u.hostname)) {
+      var ns = "cs" + n;
+      var el = doc.createElement("div");
+      el.id = "cal-" + ns;
+      el.className = "scheduler-cal";
+      box.appendChild(el);
+      var Cal = loadCal();
+      Cal("init", ns, { origin: "https://app.cal.com" });
+      Cal.ns[ns]("inline", {
+        elementOrSelector: "#" + el.id,
+        calLink: u.pathname.replace(/^\//, ""),
+        config: { layout: "month_view", theme: "auto" }
+      });
+      Cal.ns[ns]("ui", {
+        layout: "month_view",
+        hideEventTypeDetails: false,
+        cssVarsPerTheme: { light: { "cal-brand": "#1B2A41" }, dark: { "cal-brand": "#E8A33D" } }
+      });
+    } else {
+      var frame = doc.createElement("iframe");
+      frame.src = embedUrl(link);
+      frame.title = box.getAttribute("data-title") || "Booking calendar";
+      frame.className = "scheduler-frame";
+      box.appendChild(frame);
+    }
     var alt = box.parentNode.querySelector(".scheduler-alt");
     if (alt) {
       alt.hidden = false;
       alt.querySelector("a").href = link;
     }
-  });
+  }
 
   // After paying, Stripe sends people to book.html?paid=1 to choose a time.
   var paid = /[?&]paid=1\b/.test(location.search);
   doc.querySelectorAll("[data-when-paid]").forEach(function (el) {
     el.hidden = el.getAttribute("data-when-paid") === "yes" ? !paid : paid;
+  });
+  // Only load calendars that are actually showing.
+  doc.querySelectorAll("[data-scheduler]").forEach(function (box, n) {
+    if (!box.closest("[hidden]")) mountScheduler(box, n);
   });
   if (paid && doc.getElementById("gap-check")) {
     doc.getElementById("gap-check").scrollIntoView();

@@ -469,3 +469,4 @@ img, svg { display: block; max-width: 100%; }
 .scheduler-alt { margin-top: 12px; font-size: 0.9375rem; color: var(--muted); }
 .section-band .scheduler-alt { color: var(--muted-on-band); }
 .section-band .hero-note { color: var(--muted-on-band); }
+.scheduler-cal { width: 100%; min-height: 560px; }
