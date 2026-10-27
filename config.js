@@ -14,15 +14,15 @@ window.COUNTERSIGN = {
 
   /* ---- Contact details ---------------------------------------------- */
   mobile: "[MOBILE]",          // e.g. "0400 000 000"
-  email:  "[EMAIL]",           // e.g. "hello@countersign.com.au"
+  email:  "[EMAIL]",           // e.g. "hello@countersigns.com.au"
   abn:    "[ABN]",             // e.g. "12 345 678 901"
 
   /* ---- Links -------------------------------------------------------- */
   stripePaymentLink: "[STRIPE_PAYMENT_LINK]",  // Stripe Payment Link for the $249 Gap Check
-  bookingLink:       "https://cal.com/countersign/15min",         // Cal.com or Calendly link for the free 15-minute chat
-  gapCheckBookingLink: "https://cal.com/countersign/gap-check", // Cal.com or Calendly link for the 45-minute Gap Check call (shown after payment)
+  bookingLink:       "https://cal.com/countersigns/15min",         // Cal.com or Calendly link for the free 15-minute chat
+  gapCheckBookingLink: "https://cal.com/countersigns/gap-check", // Cal.com or Calendly link for the 45-minute Gap Check call (shown after payment)
   formEndpoint:      "[FORM_ENDPOINT]",        // Formspree endpoint, e.g. "https://formspree.io/f/abcdwxyz"
-  siteUrl:           "https://iamdvirk-wq.github.io/countersign-website",             // your web address, no slash at the end, e.g. "https://countersign.com.au"
+  siteUrl:           "https://countersigns.com.au",             // your web address, no slash at the end, e.g. "https://countersigns.com.au"
 
   /* ---- Prices (shown exactly as typed) ------------------------------ */
   prices: {

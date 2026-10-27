@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Replace https://iamdvirk-wq.github.io/countersign-website with your web address, e.g. https://countersign.com.au
-Sitemap: https://iamdvirk-wq.github.io/countersign-website/sitemap.xml
+# Replace https://countersigns.com.au with your web address, e.g. https://countersigns.com.au
+Sitemap: https://countersigns.com.au/sitemap.xml

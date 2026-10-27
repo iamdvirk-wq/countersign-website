@@ -1,4 +1,4 @@
-/* Countersign — small, dependency-free page script.
+/* Countersigns — small, dependency-free page script.
    Fills in details from config.js, runs the contact form and
    the mobile booking bar. Nothing here sets cookies. */
 (function () {
@@ -46,9 +46,9 @@
     doc.querySelectorAll(".wordmark").forEach(function (el) {
       var img = doc.createElement("img");
       img.src = "assets/logo.svg";
-      img.alt = "Countersign";
+      img.alt = "Countersigns";
       img.className = "logo-img";
-      img.width = 168;
+      img.width = 184;
       img.height = 32;
       el.textContent = "";
       el.appendChild(img);
@@ -62,7 +62,7 @@
     var data = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "Countersign",
+      "name": "Countersigns",
       "slogan": "We prepare it. Your pharmacist signs it.",
       "description": "Remote QSPP accreditation admin support for independent community pharmacies: evidence registers, records and assessment-day preparation.",
       "url": url,

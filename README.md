@@ -1,4 +1,4 @@
-# Countersign website
+# Countersigns website
 
 A plain static website: three pages, no build step, nothing to install.
 
@@ -32,11 +32,11 @@ Open `config.js` in any text editor (TextEdit, Notepad or VS Code). Replace each
 | `[YOUR NAME]` | Your name | `"Sam Taylor"` |
 | `[ONE LINE ABOUT YOUR EXPERIENCE]` | One sentence about your pharmacy background | `"Eight years in community pharmacy admin and QCPP preparation."` |
 | `[MOBILE]` | Your mobile, written how you want it shown | `"0400 123 456"` |
-| `[EMAIL]` | Your business email | `"hello@countersign.com.au"` |
+| `[EMAIL]` | Your business email | `"hello@countersigns.com.au"` |
 | `[ABN]` | Your ABN | `"12 345 678 901"` |
 | `[STRIPE_PAYMENT_LINK]` | Your Stripe Payment Link for the Gap Check | `"https://buy.stripe.com/abc123"` |
-| `[BOOKING_LINK]` | Your Cal.com or Calendly link for the free 15-minute chat. It appears as a calendar on the booking page | `"https://cal.com/countersign/15min"` |
-| `[GAP_CHECK_BOOKING_LINK]` | Your Cal.com or Calendly link for the 45-minute Gap Check call. It's shown after someone pays | `"https://cal.com/countersign/gap-check"` |
+| `[BOOKING_LINK]` | Your Cal.com or Calendly link for the free 15-minute chat. It appears as a calendar on the booking page | `"https://cal.com/countersigns/15min"` |
+| `[GAP_CHECK_BOOKING_LINK]` | Your Cal.com or Calendly link for the 45-minute Gap Check call. It's shown after someone pays | `"https://cal.com/countersigns/gap-check"` |
 | `[FORM_ENDPOINT]` | Your Formspree form address (see step 3) | `"https://formspree.io/f/xyzabcd"` |
 | `siteUrl` | Your web address, **no slash at the end**. Already set to the GitHub Pages address | `"https://iamdvirk-wq.github.io/countersign-website"` |
 | `prices` | The three prices, exactly as they should appear | `"$249"`, `"$1,200"`, `"$199"` |
@@ -130,7 +130,7 @@ Edit a file on GitHub (open it and click the pencil icon), then click **Commit c
 
 ## 6. Optional extras
 
-- **Your logo:** save it as `assets/logo.svg` (keep that exact name), then set `useLogoFile: true` in `config.js`. Until then, the site shows the "Countersign" wordmark with an amber tick.
+- **Your logo:** save it as `assets/logo.svg` (keep that exact name), then set `useLogoFile: true` in `config.js`. Until then, the site shows the "Countersigns" wordmark with an amber tick.
 - **Your photo:** save a square photo as `assets/founder.jpg` (about 400 × 400 px). In `index.html`, find the comment that starts `Optional photo` and follow its instructions.
 - **Testimonials:** in `index.html`, find `TESTIMONIALS — switched off`. Add **real** quotes only, with the person's written permission, then remove the comment marks around that block.
 - **Analytics:** Cloudflare Web Analytics is cookie-free. In Cloudflare, go to **Analytics & Logs → Web Analytics**, add your site and copy the token into `cloudflareAnalyticsToken`. On Cloudflare Pages, you can also switch it on in the project settings without touching any code.
