@@ -9,11 +9,11 @@
 window.COUNTERSIGN = {
 
   /* ---- About you ---------------------------------------------------- */
-  founderName:       "[YOUR NAME]",
+  founderName:       "Div",
   founderExperience: "[ONE LINE ABOUT YOUR EXPERIENCE]",   // e.g. "Eight years working in community pharmacy front-of-house and admin."
 
   /* ---- Contact details ---------------------------------------------- */
-  mobile: "[MOBILE]",          // e.g. "0400 000 000"
+  mobile: "0468 891 985",          // e.g. "0400 000 000"
   email:  "[EMAIL]",           // e.g. "hello@countersigns.com.au"
   abn:    "28 551 886 085",             // e.g. "12 345 678 901"
 
